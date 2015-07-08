@@ -1,0 +1,12 @@
+whiptail  --msgbox "wellcome To Vyoma " 5 60 --title "Sart Installation" --backtitle "Vyoma Installation"
+
+
+whiptail --yesno "Are you sure you want to continue with deployment?" 10 60 --title "New deployment" --defaultno
+
+whiptail --menu "Please choose the version to deploy" 15 40 5 \ 1.0.0-RC1 1 1.0.0-RC2 2 1.0.0-RC3 3
+
+for i in `seq 0 100` ;  do  echo $i; sleep 0.125; done | \
+whiptail --gauge "Deploying..." 10 50 0
+
+
+
